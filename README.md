@@ -5,8 +5,11 @@ FILES:
 
 Creating a Pipeline to Search for Dwarf Nova Eruptions in Globular Cluster M15 (paper):
 
-Undergraduate thesis paper on how to computationally find variable stars in globular clusters using image subtraction (via "SWIFT Subtract Writeup"). This study uses UVOT data from SWIFT telescope archival images of globular cluster Messier 15. Resulted in a catalog of 169 variable star candidates, later reduced to 38 using "Table Analysis Writeup."
+Undergraduate thesis paper on how to computationally find variable stars in globular clusters using image subtraction (via "SWIFT Subtract Writeup"). This study uses UVOT data from SWIFT telescope archival images of globular cluster Messier 15. Resulted in a catalog of 169 variable star candidates.
 
+Thesis Addendum (paper):
+
+Further analysis of the 169 candidates from the paper above using "Table Analysis Writeup." Compares catalog to a list of known variable stars in M15, reducing catalog to 39 variables, and begins the process of performing aperature photometry on the remaining candidates.
 
 SWIFT Subtract Writeup (code):
 
