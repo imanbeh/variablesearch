@@ -14,4 +14,4 @@ The user enters two fits files for subtraction. User needs to define a center fo
 
 Table Analysis Writeup (code):
 
-This code allows the user to compare a list of stellar objects with a list of known objects. The intention is to identify which sources from the original list are undiscovered. This is written for a case in which the comparison dataset is a list of known rr lyra. Repeat sources will be removed, resulting in a final table of unique objects.
+This code allows the user to compare a list of stellar objects with a list of known objects, and perform aperature photometry on selected stars. The intention is to identify which sources from the original list are undiscovered. This is written for a case in which the comparison dataset is a list of known rr lyra. Repeat sources will be removed, resulting in a final table of unique objects that can be analyze further using the aperature photometry code.
