@@ -1,3 +1,9 @@
+'''
+aperture sum calculation
+'''
+
+from photutils.aperture import aperture_photometry
+
 def ap_sum(dataframe, wavelength, data, aperture):
     '''
     dataframe: your dataframe with filenames, coordinates, and more
@@ -14,7 +20,7 @@ def ap_sum(dataframe, wavelength, data, aperture):
     i2 = 0
     #aperture = CircularAperture((3380.9988, 2184.2214), r=3.0)
 
-    for j in df['Filter nm']:
+    for j in dataframe['Filter nm']:
         if j == wavelength:
             print(i,j)
             phot_table = aperture_photometry(data[i], aperture)
