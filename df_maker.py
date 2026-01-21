@@ -140,7 +140,14 @@ df['Star 2'] = star2coords
 df['Star 3'] = star3coords
 df['Star 4'] = star4coords
 df = df.drop([13])
-df
+
+from astropy.time import Time
+from datetime import datetime
+
+t1 = Time(df['Times'].to_list(),format = 'iso')
+df['Time as Object']=t1.tt.datetime
+df['Day'] = [t.datetime.day for t in t1]
+df.sort_values(by = 'Filter nm', inplace = True)
 
 
 
