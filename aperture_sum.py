@@ -2,7 +2,7 @@
 aperture sum calculation
 '''
 
-from photutils.aperture import aperture_photometry
+from photutils.aperture import aperture_photometry, ApertureStats
 
 def ap_sum(dataframe, wavelength, data, aperture):
     '''
@@ -26,10 +26,14 @@ def ap_sum(dataframe, wavelength, data, aperture):
             phot_table = aperture_photometry(data[i], aperture)
             phot_table['aperture_sum'].info.format = '%.8g'  # for consistent table output
             p1[i2] = phot_table
+
+            # allow for error calculations in aperture
+            apstats = ApertureStats(data[i], aperture)
+
             sumstar[i2] = phot_table['aperture_sum'][0]
             i2+=1
         i+=1
         
         
     print(sumstar)
-    return sumstar
+    return sumstar, apstats
