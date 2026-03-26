@@ -14,6 +14,7 @@ def ap_sum(dataframe, wavelength, data, aperture):
     # star1
 
     sumstar = [None]*3
+    apstats = [None]*3
 
     p1 = [None]*3
     i= 0
@@ -28,7 +29,7 @@ def ap_sum(dataframe, wavelength, data, aperture):
             p1[i2] = phot_table
 
             # allow for error calculations in aperture
-            apstats = ApertureStats(data[i], aperture)
+            apstats[i2] = ApertureStats(data[i], aperture)
 
             sumstar[i2] = phot_table['aperture_sum'][0]
             i2+=1
