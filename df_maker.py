@@ -198,5 +198,5 @@ for i in range(len(l)):
             hdus.append(fits.open(cutpath))
             headers.append(hdus[count][1])
             datas.append(fits.getdata(cutpath))
-            datas[count] += 1
+            #datas[count] += 1
             count+=1
